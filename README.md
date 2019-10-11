@@ -1,4 +1,4 @@
-# Groovy-BF-Interpreter
+# Groovy-BF
 
 Yet another BF interpreter written in Groovy
 
@@ -10,6 +10,9 @@ Yet another BF interpreter written in Groovy
     println interpreter.interpret(bf) // 'Hello, World!\n'
 ```
 
+
+## To Do
+In addition to the basic interpreter, I really want to make a BF code generator.
 
 
 ## References
