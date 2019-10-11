@@ -15,17 +15,19 @@ class Interpreter {
         reset()
         program = sanitizeSource(src)
         while(insPtr < program.length()){
-            switch(program[insPtr]){
-                case '[':   jumpFwd();                  break;
-                case ']':   jumpBack();                 break;
-                case '>':   moveRight();    insPtr++;   break;
-                case '<':   moveLeft();     insPtr++;   break;
-                case '+':   increment();    insPtr++;   break;
-                case '-':   decrement();    insPtr++;   break;
-                case '.':   write();        insPtr++;   break;
-                case ',':   read();         insPtr++;   break;
-                default:    /*Do nothing*/  insPtr++;   break;
+            def c = program[insPtr]
+            switch(c){
+                case '[':   jumpFwd();      break;
+                case ']':   jumpBack();     break;
+                case '>':   moveRight();    break;
+                case '<':   moveLeft();     break;
+                case '+':   increment();    break;
+                case '-':   decrement();    break;
+                case '.':   write();        break;
+                case ',':   read();         break;
+                default:    throw new Exception("Unknown character found! '${c}'")
             }
+            insPtr++
         }
         return outBuffer
     }
@@ -46,8 +48,6 @@ class Interpreter {
                     loopDepth--
                 }
             }
-        } else{
-            insPtr++
         }
     }
     
@@ -63,8 +63,6 @@ class Interpreter {
                     loopDepth--
                 }
             }
-        } else{
-            insPtr++
         }
     }
 
