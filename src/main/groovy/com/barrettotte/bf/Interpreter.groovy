@@ -31,7 +31,7 @@ class Interpreter {
     }
 
     private String sanitizeSource(final String src){
-        return src.trim().replaceAll("\\p{C}", "").findAll{(it in ['[',']','>','<','+','-','.',','])}.join("")
+        return src.findAll{(it in ['[',']','>','<','+','-','.',','])}.join("")
     }
 
     private void jumpFwd(){
