@@ -4,7 +4,11 @@ Yet another BF interpreter written in Groovy
 
 
 ## Examples
-* xxx
+```groovy
+    Interpreter interpreter = new Interpreter()
+    def bf = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.'
+    println interpreter.interpret(bf) // 'Hello, World!\n'
+```
 
 
 
