@@ -16,5 +16,6 @@ In addition to the basic interpreter, I really want to make a BF code generator.
 
 
 ## References
+* Summary of what BF is https://gist.github.com/roachhd/dce54bec8ba55fb17d3a
 * https://en.wikipedia.org/wiki/Brainfuck (Hello World test case)
 
