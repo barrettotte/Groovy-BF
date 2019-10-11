@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.codehaus.groovy:groovy-all:2.4.12')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+}
+
+test {
+	testLogging {
+		exceptionFormat = 'full'
+		showExceptions true
+		events "skipped", "failed", "standardError"
+		showStandardStreams = true
+	}
+    useJUnitPlatform{
+		includeEngines 'junit-jupiter'
+	}
+}
